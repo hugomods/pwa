@@ -1,0 +1,33 @@
+{{- $iconPath := .Site.Params.pwa.icon_path }}
+{{- $icon := resources.Get $iconPath }}
+{{- $icons := slice }}
+{{- with $icon }}
+  {{- range $.Site.Params.pwa.icon_sizes }}
+    {{- $sizes := printf "%dx%d" . . }}
+    {{- $icons = $icons | append (dict
+      "src" ($icon.Resize $sizes).Permalink
+      "sizes" $sizes
+      "type" $icon.MediaType.Type
+      )
+    }}
+  {{- end }}
+{{- else }}
+  {{- warnf "[pwa] the icon image doesn't exist: assets/%s." $iconPath }}
+{{- end }}
+{{- $id := "/" }}
+{{- if ne .Site.LanguagePrefix "" }}
+  {{- $id = .Site.LanguagePrefix }}
+{{- end }}
+{{- $default := dict
+  "id" $id
+  "name" .Site.Title
+  "description" .Site.Params.description
+  "dir" .Site.Language.LanguageDirection
+  "display" "standalone"
+  "lang" .Site.Language.Lang
+  "scope" ("/" | absURL)
+  "start_url" "."
+  "icons" $icons
+}}
+{{- $params := default dict .Site.Params.pwa.manifest }}
+{{- merge $default $params | jsonify -}}

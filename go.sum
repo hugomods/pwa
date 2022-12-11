@@ -1,0 +1,6 @@
+github.com/jakearchibald/idb v7.1.1+incompatible h1:/o1ng3qUjgMUeeKFim3J3tiQAitcVXU12pXIjSzwT/c=
+github.com/jakearchibald/idb v7.1.1+incompatible/go.mod h1:AuDoW54s2DKfbclM+ScrnPp8ahUQ9rHph9bb8sZTEXc=
+github.com/razonyang/hugo-mod-workbox v0.1.0 h1:LRmNrw2Bi5Z8Q/ZtdEQngQwbqwtXj34edGOSbiZx2uk=
+github.com/razonyang/hugo-mod-workbox v0.1.0/go.mod h1:xHtfVCzHzfijepXdYVH3wejwodFg8yDOmFOrpEogEkk=
+github.com/razonyang/hugopress v0.3.0 h1:8RUqmyWC/CafR37uG+Tnf7Ek9vUcHMOT3/EY2PeQMSQ=
+github.com/razonyang/hugopress v0.3.0/go.mod h1:QliBWV3WwwkayNOm0aJbnn0d3j7IYT5Q7yCB0lygZDA=

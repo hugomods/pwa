@@ -1,0 +1,58 @@
+{{/* JS compile options. */}}
+{{- $precaches := slice }}
+{{- $langs := slice }}
+{{/* Get precaches pages. */}}
+{{- range .Sites }}
+  {{- $langs = $langs | append .Language.Lang }}
+  {{- $home := .GetPage "/" }}
+  {{- if not $home }}
+    {{- continue }}
+  {{- end }}
+  {{- range $home.OutputFormats }}
+    {{- if in (slice "offline" "WebAppManifest") .Format.Name }}
+      {{- $precaches = $precaches | append .RelPermalink }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{/* Get precaches assets. */}}
+{{- with .Store.Get "pwa-precache" }}
+  {{- $precaches = $precaches | append (uniq .) }}
+{{- end }}
+{{- $pwaParams := .Site.Params.pwa }}
+{{/* Get precaches from configuration. */}}
+{{- range $pwaParams.precaches }}
+  {{- $precaches = $precaches | append .url }}
+{{- end }}
+{{/* Site base URL. */}}
+{{- $baseURL := absURL .Site.BaseURL }}
+{{/* Fix the Hugo server base URL, something like "//localhost:1313" */}}
+{{- if hasPrefix $baseURL "//" }}
+  {{- $baseURL = printf "http:%s" $baseURL }}
+{{- end }}
+{{/* Make sure to end with trailing slash. */}}
+{{- $baseURL = printf "%s/" (strings.TrimSuffix "/" $baseURL) }}
+{{/* Params. */}}
+{{- $params := dict
+  "baseURL" $baseURL
+  "langs" $langs
+  "precaches" $precaches
+  "debug" $pwaParams.debug
+  "caches" $pwaParams.caches
+}}
+{{- $options := dict
+  "sourceMap" (cond hugo.IsProduction "" "inline")
+  "minify" hugo.IsProduction
+  "target" "es2018"
+  "params" $params
+  "targetPath" "sw.js"
+}}
+{{- $js := resources.Get "pwa/service-worker/index.ts" }}
+{{/* Compile JS. */}}
+{{- $js = $js | js.Build $options }}
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('DOMContentLoaded', function() {
+    navigator.serviceWorker.register('{{ $js.RelPermalink }}');
+  });
+}
+</script>
