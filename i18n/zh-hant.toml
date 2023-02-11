@@ -5,7 +5,7 @@ other = "返回"
 other = "主頁"
 
 [offline_title]
-other = "哎喲！你離線了。"
+other = "哎喲！你離線了"
 
 [offline_info]
 other = """
