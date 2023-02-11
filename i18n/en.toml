@@ -5,7 +5,7 @@ other = "Go back"
 other = "Home"
 
 [offline_title]
-other = "Oops! You're offline."
+other = "Oops! You're offline"
 
 [offline_info]
 other = """
