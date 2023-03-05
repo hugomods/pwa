@@ -15,6 +15,7 @@ path = "github.com/razonyang/hugo-mod-icons-bootstrap"
 path = "github.com/razonyang/hugo-mod-workbox"
 
 [params.hugopress.modules.pwa.hooks.head-begin]
+cacheable = true
 
 [params.hugopress.modules.pwa.hooks.body-end]
 weight = 1000
