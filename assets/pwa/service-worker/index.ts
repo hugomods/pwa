@@ -98,11 +98,14 @@ const handler = async options => {
     if (dest === 'document') {
         const offline = '/offline.html'
         let lang = ''
+        let paths: string[]
         if (url.indexOf(params.baseURL) === 0) {
-            const paths = url.replace(params.baseURL, '').split('/', 1)
-            if (params.langs.includes(paths[0])) {
-                lang = paths[0]
-            }
+            paths = url.replace(params.baseURL, '').split('/', 1)
+        } else {
+            paths = (new URL(url)).pathname.replace(/^\//, '').split('/', 1)
+        }
+        if (paths.length > 0 && params.langs.includes(paths[0])) {
+            lang = paths[0]
         }
 
         debug('loading offline page', `/${lang}/offline.html`, offline)
