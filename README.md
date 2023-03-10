@@ -9,7 +9,7 @@
 
 - [x] Offline available.
   - [x] Offline page.
-  - [ ] Offline image.
+  - [x] Offline image.
 - [x] Install site on home screen.
 - [x] Precaching.
 - [x] Caching.

@@ -112,6 +112,9 @@ const handler = async options => {
         return (await cache.match(`/${lang}/offline.html`))
             || (await cache.match(offline))
             || Response.error()
+    } else if (dest === 'image' && params.offline_image) {
+        return (await cache.match(params.offline_image))
+            || Response.error()
     }
 
     // Load precached assets.
