@@ -95,6 +95,12 @@ const handler = async options => {
     const url = options.request.url
     const cache = await self.caches.open(fallbacksCache)
 
+    // Return the cached item if found.
+    const cached = await cache.match(url)
+    if (cached) {
+        return cached
+    }
+
     if (dest === 'document') {
         const offline = '/offline.html'
         let lang = ''
@@ -117,8 +123,8 @@ const handler = async options => {
             || Response.error()
     }
 
-    // Load precached assets.
-    return (await cache.match(url)) || Response.error()
+    // Return a error response.
+    return Response.error()
 };
 
 setCatchHandler(handler)
