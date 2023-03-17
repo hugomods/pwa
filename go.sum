@@ -1,7 +1,8 @@
 github.com/jakearchibald/idb v7.1.1+incompatible h1:/o1ng3qUjgMUeeKFim3J3tiQAitcVXU12pXIjSzwT/c=
 github.com/jakearchibald/idb v7.1.1+incompatible/go.mod h1:AuDoW54s2DKfbclM+ScrnPp8ahUQ9rHph9bb8sZTEXc=
-github.com/razonyang/hugo-mod-icons-bootstrap v0.2.0 h1:oPXiChKQxtC5xj9DZLrLlERZOtSQr4j/Iup4AI2Se5s=
-github.com/razonyang/hugo-mod-icons-bootstrap v0.2.0/go.mod h1:SUvnZyVLycwUSLDFdmehibozDym6yT/xfEaC/US0wHE=
+github.com/razonyang/hugo-mod-icons v0.5.0 h1:SEm+CqNbm02ULwyCHBwPuZJUlHQ/uh8IYbqaEDFokhg=
+github.com/razonyang/hugo-mod-icons/vendors/bootstrap v0.3.0 h1:B7OKKcMLx0LkuuEJqAD++Pa7jDuRj5m/fsRXveAxyRI=
+github.com/razonyang/hugo-mod-icons/vendors/bootstrap v0.3.0/go.mod h1:Trbpo1D/X/yRvQ7vWVEwePvcERoxA9JVYKe7wzlh/hA=
 github.com/razonyang/hugo-mod-workbox v0.1.2 h1:Bvb8VV+yJlBfq3asjnCl+SUwv7SBh5TQprxFftt2WmU=
 github.com/razonyang/hugo-mod-workbox v0.1.2/go.mod h1:98/R4rolV+cSxt36IrRTNczcZdmeXDU60F7fkC2YiNc=
 github.com/razonyang/hugopress v0.7.1 h1:5d9H2kR1lHj/k8AwU5SA5RGL3lC5KaA85B+vn0uikWQ=

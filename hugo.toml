@@ -14,7 +14,7 @@ mediaType = "text/html"
 path = "github.com/razonyang/hugopress"
 
 [[module.imports]]
-path = "github.com/razonyang/hugo-mod-icons-bootstrap"
+path = "github.com/razonyang/hugo-mod-icons/vendors/bootstrap"
 
 [[module.imports]]
 path = "github.com/razonyang/hugo-mod-workbox"
