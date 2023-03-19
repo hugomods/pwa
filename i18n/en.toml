@@ -1,0 +1,18 @@
+[go_back]
+other = "Go back"
+
+[home]
+other = "Home"
+
+[offline_title]
+other = "Oops! You're offline"
+
+[offline_info]
+other = """
+It seems there is a problem of your connection, please check your network status.
+
+Please get in touch with us if you think this is a server error. Thank you.
+"""
+
+[try_again]
+other = "Try again"

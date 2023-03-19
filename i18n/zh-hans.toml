@@ -1,0 +1,18 @@
+[go_back]
+other = "返回"
+
+[home]
+other = "主页"
+
+[offline_title]
+other = "哎哟！你离线了"
+
+[offline_info]
+other = """
+看来你的连接有问题，请检查你的网络状态。
+
+如果您认为这是服务器错误，请与我们联系，非常感谢。
+"""
+
+[try_again]
+other = "再试一次"

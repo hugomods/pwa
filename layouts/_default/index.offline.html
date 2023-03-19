@@ -1,0 +1,114 @@
+{{/* You should override this layout to fit your UI. */}}
+{{ $title := i18n "offline_title" }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{- $title -}}</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+      }
+
+      .offline-icon,
+      .offline-title {
+        color: #dc3545;
+      }
+
+      .offline-info {
+        margin-bottom: 2rem;
+      }
+
+      .offline-action {
+        --offline-action-bg: #0d6efd;
+        text-decoration: none;
+        background: var(--offline-action-bg);
+        color: white;
+        margin: 0.25rem;
+        padding: 0.5rem;
+      }
+
+      .offline-action-go-back {
+        --offline-action-bg: #198754;
+      }
+
+      .offline-action-try-again {
+        --offline-action-bg: #6c757d;
+      }
+
+      .offline-action-icon {
+        vertical-align: -0.125em;
+        margin-right: 0.125rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="offline">
+      {{ partial "icons/icon" (dict
+        "vendor" "bootstrap"
+        "name" "wifi-off"
+        "className" "offline-icon"
+        "width" "8rem"
+        "height" "8rem"
+        )
+      }}
+      <h1 class="offline-title">{{- $title -}}</h1>
+      <div class="offline-info">
+        {{ i18n "offline_info" | safeHTML }}
+      </div>
+      <div class="offline-actions">
+        <a
+          class="offline-action offline-action-home"
+          href="{{ .Site.Home.RelPermalink }}"
+        >
+          {{- partial "icons/icon" (dict
+            "vendor" "bootstrap"
+            "name" "house"
+            "className" "offline-action-icon"
+            "width" "1rem"
+            "height" "1rem"
+            )
+          -}}
+          {{- i18n "home" -}}
+        </a>
+        <a
+          class="offline-action offline-action-go-back"
+          href="javascript: window.history.back();"
+        >
+          {{- partial "icons/icon" (dict
+            "vendor" "bootstrap"
+            "name" "arrow-left-circle"
+            "className" "offline-action-icon"
+            "width" "1rem"
+            "height" "1rem"
+            )
+          -}}
+          {{- i18n "go_back" -}}
+        </a>
+        <a
+          class="offline-action offline-action-try-again"
+          href="javascript: window.location.reload();"
+        >
+          {{- partial "icons/icon" (dict
+            "vendor" "bootstrap"
+            "name" "arrow-clockwise"
+            "className" "offline-action-icon"
+            "width" "1rem"
+            "height" "1rem"
+            )
+          -}}
+          {{- i18n "try_again" -}}
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

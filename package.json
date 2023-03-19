@@ -1,0 +1,17 @@
+{
+  "name": "Hugo PWA Module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomods/pwa.git"
+  },
+  "author": "razonyang <razonyang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugomods/pwa/issues"
+  },
+  "homepage": "https://github.com/hugomods/pwa#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}
