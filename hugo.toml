@@ -5,7 +5,8 @@ min = "0.110.0"
 
 [outputFormats]
 [outputFormats.Offline]
-baseName = "offline"
+path = "offline"
+baseName = "index"
 isHTML = true
 notAlternative = true
 mediaType = "text/html"
