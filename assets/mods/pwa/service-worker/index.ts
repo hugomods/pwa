@@ -102,7 +102,7 @@ const handler = async options => {
     }
 
     if (dest === 'document') {
-        const offline = '/offline.html'
+        const offline = '/offline/'
         let lang = ''
         let paths: string[]
         if (url.indexOf(params.baseURL) === 0) {
@@ -114,8 +114,8 @@ const handler = async options => {
             lang = paths[0]
         }
 
-        debug('loading offline page', `/${lang}/offline.html`, offline)
-        return (await cache.match(`/${lang}/offline.html`))
+        debug('loading offline page', `/${lang}/offline/`, offline)
+        return (await cache.match(`/${lang}/offline/`))
             || (await cache.match(offline))
             || Response.error()
     } else if (dest === 'image' && params.offline_image) {
