@@ -1,0 +1,54 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-blue {
+    color: blue;
+}
+
+.text-red {
+    color: red;
+}
+
+.navbar {
+    background: brown;
+    color: white;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0.25rem;
+}
+
+.navbar li:not(:last-child)::after {
+    content: "/";
+    margin-left: 0.5rem;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.navbar li a:hover {
+    opacity: 1;
+}
+
+.main {
+    text-align: center;
+    margin: 1rem;
+}
+
+.posts {
+    list-style: none;
+    padding-left: 0;
+}

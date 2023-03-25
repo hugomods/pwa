@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ partialCached "pwa/assets/meta" . }}
+    {{ partialCached "css" . }}
+  </head>
+  <body>
+    {{ partial "header" . }}
+    <div class="main">
+      {{ block "main" . }}{{ end }}
+      {{ partialCached "tests" . }}
+    </div>
+    {{ partialCached "js" . }}
+    {{ partialCached "pwa/assets/sw" . }}
+  </body>
+</html>
