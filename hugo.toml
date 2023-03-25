@@ -21,7 +21,7 @@ path = "github.com/hugomods/workbox"
 cacheable = true
 
 [params.hugopress.modules.pwa.hooks.body-end]
-weight = 1000
+cacheable = true
 
 [params.pwa]
 debug = false
