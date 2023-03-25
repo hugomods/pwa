@@ -1,0 +1,9 @@
+{{/* Site base URL. */}}
+{{- $url := absURL site.BaseURL }}
+{{/* Fix the Hugo server base URL, something like "//localhost:1313" */}}
+{{- if hasPrefix $url "//" }}
+  {{- $url = printf "http:%s" $url }}
+{{- end }}
+{{/* Make sure to end with trailing slash. */}}
+{{- $url = printf "%s/" (strings.TrimSuffix "/" $url) }}
+{{- return $url -}}
