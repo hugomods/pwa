@@ -1,0 +1,10 @@
+github.com/GoogleChrome/workbox v6.5.4+incompatible h1:J4yOdtnLGsxom7oTS+mRegKJ5a+Wi4j2qfZ72AWRlOM=
+github.com/GoogleChrome/workbox v6.5.4+incompatible/go.mod h1:dyEoGLpJeO43pUVJb+nNNr1WRgoF81hNEl4UGLV+yow=
+github.com/hugomods/icons v0.6.0 h1:G6RU93okhPPRDh/jqcew9gwkcYpSpg0rCBv4S6yUAFw=
+github.com/hugomods/icons v0.6.0/go.mod h1:cIkSvK6W0q6N4U6n9KGz+QfRWQXAW0INd+1P31gPNGg=
+github.com/hugomods/idb-js v0.1.0 h1:mA6hEGtR0aFEdmq9zYMGpfSpCU6SMilx9RzC4uK3DqY=
+github.com/hugomods/idb-js v0.1.0/go.mod h1:GPfnmr+BQpP4s6Epd4Yu+RlUog8q/Djw8qy8BZFWZ04=
+github.com/hugomods/pwa v0.1.2 h1:i1BiS3pm2lEPYL7csJul6v80Z2+7D7exvs44Nj1KwaI=
+github.com/hugomods/pwa v0.1.2/go.mod h1:gNUU0CesSWxJAeK3lBk+vlHiqJO+E+5p2ylLj0OIaM8=
+github.com/twbs/icons v1.10.3 h1:8i0wcDkk04KXd2ofLtMHUERkA5OkrpAzDyBVv/PJaL0=
+github.com/twbs/icons v1.10.3/go.mod h1:GnRlymgVWp5iVJCMa0Me5b6tFyGpVc2bSxPMRGIJmyA=

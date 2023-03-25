@@ -1,0 +1,3 @@
+{{ $js := resources.Get "main.js" }}
+{{ partial "pwa/functions/precache" (dict "URL" $js.RelPermalink "Page" .) }}
+<script src="{{ $js.RelPermalink }}"></script>

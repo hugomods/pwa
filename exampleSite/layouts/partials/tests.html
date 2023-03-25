@@ -1,0 +1,14 @@
+<br><hr>
+
+<h2>Testing</h2>
+
+<h3>1. CSS Tests</h3>
+{{ range slice "blue" "red" "green" }}
+  <p class="text-{{ . }}">{{ . | title }} text.</p>
+{{ end }}
+
+
+<h3>2. JavaScript Tests</h3>
+<p>
+  <button class="click-me">Click me to check whether the JS works as expected.</button>
+</p>
