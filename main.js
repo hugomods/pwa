@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.click-me').addEventListener('click', () => {
-        alert('Test passed.')
-    })
+    const e = document.querySelector('.greeting')
+    e.classList.remove('text-red')
+    e.classList.add('text-green')
+    e.innerHTML = 'JS was loaded successfully.';
 })
