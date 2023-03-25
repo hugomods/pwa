@@ -1,3 +1,4 @@
+{{- $baseURL := partialCached "pwa/functions/baseurl" . }}
 {{- $iconPath := .Site.Params.pwa.icon_path }}
 {{- $icon := resources.Get $iconPath }}
 {{- $icons := slice }}
@@ -25,8 +26,8 @@
   "dir" .Site.Language.LanguageDirection
   "display" "standalone"
   "lang" .Site.Language.Lang
-  "scope" ("/" | absURL)
-  "start_url" "."
+  "scope" $baseURL
+  "start_url" $baseURL
   "icons" $icons
 }}
 {{- $params := default dict .Site.Params.pwa.manifest }}

@@ -1,3 +1,5 @@
+{{/* Site base URL. */}}
+{{- $baseURL := partialCached "pwa/functions/baseurl" . }}
 {{/* JS compile options. */}}
 {{- $precaches := slice }}
 {{- $langs := slice }}
@@ -21,16 +23,15 @@
 {{- $pwaParams := .Site.Params.pwa }}
 {{/* Get precaches from configuration. */}}
 {{- range $pwaParams.precaches }}
-  {{- $precaches = $precaches | append .url }}
+  {{- $url := urls.Parse .url }}
+  {{- if not $url.Scheme }}
+    {{/* Format the url with base URL. */}}
+    {{- $precaches = $precaches | append (printf "%s%s" $baseURL (strings.TrimPrefix "/" .url)) }}
+  {{- else }}
+    {{/* Just append the external link. */}}
+    {{- $precaches = $precaches | append .url }}
+  {{- end }}
 {{- end }}
-{{/* Site base URL. */}}
-{{- $baseURL := absURL .Site.BaseURL }}
-{{/* Fix the Hugo server base URL, something like "//localhost:1313" */}}
-{{- if hasPrefix $baseURL "//" }}
-  {{- $baseURL = printf "http:%s" $baseURL }}
-{{- end }}
-{{/* Make sure to end with trailing slash. */}}
-{{- $baseURL = printf "%s/" (strings.TrimSuffix "/" $baseURL) }}
 {{/* Offline image. */}}
 {{- $offlineImg := "" }}
 {{- with resources.Get (default "images/pwa/offline.png" $pwaParams.offline_image) }}

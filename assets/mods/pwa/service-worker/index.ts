@@ -102,7 +102,7 @@ const handler = async options => {
     }
 
     if (dest === 'document') {
-        const offline = '/offline/'
+        let offline: Response | undefined;
         let lang = ''
         let paths: string[]
         if (url.indexOf(params.baseURL) === 0) {
@@ -112,11 +112,17 @@ const handler = async options => {
         }
         if (paths.length > 0 && params.langs.includes(paths[0])) {
             lang = paths[0]
+            const offlineUrl = `${params.baseURL}${lang}/offline/`
+            debug('loading multilingual offline page', offlineUrl)
+            offline = await cache.match(offlineUrl)
+            if (offline) {
+                return offline
+            }
         }
 
-        debug('loading offline page', `/${lang}/offline/`, offline)
-        return (await cache.match(`/${lang}/offline/`))
-            || (await cache.match(offline))
+        const offlineUrl = `${params.baseURL}offline/`
+        debug('loading the fallback offline page', offlineUrl)
+        return (await cache.match(offlineUrl))
             || Response.error()
     } else if (dest === 'image' && params.offline_image) {
         return (await cache.match(params.offline_image))
