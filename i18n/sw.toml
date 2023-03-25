@@ -1,0 +1,17 @@
+[go_back]
+other = "Rudi Nyuma"
+
+[home]
+other = "Mwanzo"
+
+[offline_title]
+other = "Lo! Hauko mtandaoni"
+
+[offline_info]
+other = """
+Inaonekana kuna tatizo la muunganisho wako, tafadhali angalia hali ya mtandao wako.
+Tafadhali wasiliana nasi ikiwa unadhani hii ni hitilafu ya seva. Asante.
+"""
+
+[try_again]
+other = "Jaribu tena"
