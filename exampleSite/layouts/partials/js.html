@@ -1,3 +1,4 @@
 {{ $js := resources.Get "main.js" }}
-{{ partial "pwa/functions/precache" (dict "URL" $js.RelPermalink "Page" .) }}
 <script src="{{ $js.RelPermalink }}"></script>
+{{/* THIS OPERATION CANNOT BE BE CACHED BY partialCached. */}}
+{{ partial "pwa/functions/precache" (dict "URL" $js.RelPermalink "Page" .) }}
