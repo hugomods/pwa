@@ -34,20 +34,20 @@ offline_image = "images/pwa/offline.png"
 
 [params.pwa.caches.font]
 strategy = "cache-first"
-# 30d
-max_age = 2592000
+origins = []
+max_age = 2592000 # 30d
 
 [params.pwa.caches.image]
 strategy = "cache-first"
-# 30d
-max_age = 2592000
+origins = []
+max_age = 2592000 # 30d
 
 [params.pwa.caches.script]
 strategy = "cache-first"
-# 30d
-max_age = 2592000
+origins = []
+max_age = 2592000 # 30d
 
 [params.pwa.caches.style]
 strategy = "cache-first"
-# 30d
-max_age = 2592000
+origins = []
+max_age = 2592000 # 30d
