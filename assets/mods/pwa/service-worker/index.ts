@@ -42,11 +42,13 @@ const assets = ['font', 'image', 'script', 'style']
 for (let i in assets) {
     const kind = assets[i]
     const cache = params.caches[kind]
+    // Remove the trailing slash from origin.
+    const origins = cache.origins ? cache.origins.map((origin) => origin.replace(/\/$/, '')) : []
     const cacheName = cachePrefix + kind + 's'
     let strategy = null
     let plugins = [
         new CacheableResponsePlugin({
-            statuses: [200],
+            statuses: [0, 200],
         }),
         new ExpirationPlugin({
             maxAgeSeconds: cache.max_age ?? 60 * 60 * 24 * 30,
@@ -75,8 +77,22 @@ for (let i in assets) {
             throw new Error(`invalid strategy for kind "${kind}": ` + cache.strategy)
     }
     registerRoute(
-        ({ request }) => {
-            return request.destination === kind;
+        ({ request, sameOrigin, url }) => {
+            if (request.destination !== kind) {
+                return false
+            }
+
+            // validate origins
+            if (sameOrigin) {
+                return true
+            }
+
+            if (origins && origins.includes(url.origin.replace(/\/$/, ''))) {
+                return true
+            }
+
+            debug(`${url} will not be cached.`)
+            return false
         },
         strategy
     );
