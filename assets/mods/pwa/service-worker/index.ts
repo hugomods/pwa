@@ -2,7 +2,7 @@ import { default as params } from '@params'
 import { CacheableResponsePlugin } from 'workbox-cacheable-response'
 import { ExpirationPlugin } from 'workbox-expiration'
 import { registerRoute, setCatchHandler } from 'workbox-routing'
-import { CacheFirst, NetworkFirst, StaleWhileRevalidate } from 'workbox-strategies'
+import { CacheFirst, NetworkFirst, NetworkOnly, StaleWhileRevalidate } from 'workbox-strategies'
 
 self.__WB_DISABLE_DEV_LOGS = !params.debug
 
@@ -97,6 +97,9 @@ for (let i in assets) {
         strategy
     );
 }
+
+// Register default handler.
+registerRoute(() => true, new NetworkOnly())
 
 self.addEventListener('install', event => {
     event.waitUntil(
