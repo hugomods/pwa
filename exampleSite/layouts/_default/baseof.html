@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{ partialCached "pwa/assets/meta" . }}
     {{ partial "css" . }}
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M21GN1QFFV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M21GN1QFFV");
+    </script>
   </head>
   <body>
     {{ partial "header" . }}
@@ -12,7 +26,10 @@
       {{ partialCached "tests" . }}
     </div>
     {{ partial "js" . }}
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+    ></script>
     {{ partialCached "pwa/assets/sw" . }}
   </body>
 </html>
