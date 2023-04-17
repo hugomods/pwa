@@ -26,7 +26,7 @@ cacheable = true
 [params.pwa]
 debug = false
 icon_path = "images/pwa/icon.png"
-icon_sizes = [48, 64, 128, 144, 256, 512]
+icon_sizes = [192, 512]
 offline_image = "images/pwa/offline.png"
 
 # [[params.pwa.precaches]]
