@@ -1,0 +1,18 @@
+[go_back]
+other = "뒤로가기"
+
+[home]
+other = "홈으로"
+
+[offline_title]
+other = "저런! 인터넷 연결이 끊어졌어요."
+
+[offline_info]
+other = """
+인터넷 연결에 문제가 있는 것 같습니다. 연결 상태를 확인해 주세요.
+
+만약 접속 오류가 계속된다면 저희에게 알려주세요. 감사합니다.
+"""
+
+[try_again]
+other = "다시 시도"
