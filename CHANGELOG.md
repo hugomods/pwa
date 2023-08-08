@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/hugomods/pwa/compare/v0.3.1...v0.3.2) (2023-08-08)
+
+
+### Bug Fixes
+
+* check the .Page variable before precaching ([#39](https://github.com/hugomods/pwa/issues/39)) ([23c9f8e](https://github.com/hugomods/pwa/commit/23c9f8eda9464dae6d3ac6d4a041da692c8a7f42))
+
 ## [0.3.1](https://github.com/hugomods/pwa/compare/v0.3.0...v0.3.1) (2023-08-04)
 
 
