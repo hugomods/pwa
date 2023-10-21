@@ -1,0 +1,18 @@
+[go_back]
+other = "Kembali"
+
+[home]
+other = "Muka depan"
+
+[offline_title]
+other = "Maaf! Anda di luar talian"
+
+[offline_info]
+other = """
+Nampaknya terdapat masalah pada sambungan anda, sila semak status rangkaian anda.
+
+Sila hubungi kami jika anda fikir ini adalah ralat pelayan. Terima kasih.
+"""
+
+[try_again]
+other = "Cuba lagi"
