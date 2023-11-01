@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/hugomods/pwa/compare/v0.4.0...v0.5.0) (2023-11-01)
+
+
+### Features
+
+* **i18n:** add Russian translations ([#47](https://github.com/hugomods/pwa/issues/47)) ([b5d757e](https://github.com/hugomods/pwa/commit/b5d757eb6b6120dbacba4bef1261067434522aa7))
+
 ## [0.4.0](https://github.com/hugomods/pwa/compare/v0.3.2...v0.4.0) (2023-10-21)
 
 
