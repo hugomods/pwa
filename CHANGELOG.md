@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/hugomods/pwa/compare/v0.5.0...v0.5.1) (2023-11-02)
+
+
+### Bug Fixes
+
+* add support for multihost ([#50](https://github.com/hugomods/pwa/issues/50)) ([55d7a51](https://github.com/hugomods/pwa/commit/55d7a51780edcb1baf573ec3c4c127fd85394d21))
+
 ## [0.5.0](https://github.com/hugomods/pwa/compare/v0.4.0...v0.5.0) (2023-11-01)
 
 
