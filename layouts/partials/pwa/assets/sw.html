@@ -3,8 +3,13 @@
 {{/* JS compile options. */}}
 {{- $precaches := slice }}
 {{- $langs := slice }}
+{{- $host := .Site.BaseURL }}
 {{/* Get precaches pages. */}}
 {{- range .Sites }}
+  {{/* Do not precache other hosts assets. */}}
+  {{- if ne $host .BaseURL }}
+    {{- continue }}
+  {{- end }}
   {{- $langs = $langs | append .Language.Lang }}
   {{- $home := .GetPage "/" }}
   {{- if not $home }}
