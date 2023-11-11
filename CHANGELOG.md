@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/hugomods/pwa/compare/v0.5.1...v0.6.0) (2023-11-11)
+
+
+### Features
+
+* **i18n:** create pt-br.toml ([#52](https://github.com/hugomods/pwa/issues/52)) ([c508f05](https://github.com/hugomods/pwa/commit/c508f05e82803823cff81d9f6b4b74f1381392d4))
+
 ## [0.5.1](https://github.com/hugomods/pwa/compare/v0.5.0...v0.5.1) (2023-11-02)
 
 
