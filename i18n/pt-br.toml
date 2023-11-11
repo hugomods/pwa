@@ -1,0 +1,18 @@
+[go_back]
+other = "Voltar"
+
+[home]
+other = "Início"
+
+[offline_title]
+other = "Oops! Você está off-line"
+
+[offline_info]
+other = """
+Parece que há um problema na sua conexão. Verifique o status da sua rede.
+
+Entre em contato conosco se achar que isso é um erro do servidor. Obrigado.
+"""
+
+[try_again]
+other = "Tente novamente"
