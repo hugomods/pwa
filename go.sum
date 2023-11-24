@@ -3,6 +3,7 @@ github.com/hugomods/icons/vendors/bootstrap v0.4.0 h1:+2r0aWG/qdsdLBtQ+b5VN7z3Kh
 github.com/hugomods/icons/vendors/bootstrap v0.4.0/go.mod h1:my/xxEyTvWAym67NVfhWRvdQKrHcscU43neIBXnlbfM=
 github.com/hugomods/icons/vendors/bootstrap v0.4.1/go.mod h1:3fXUsXdGZa+f31OEKUMDGsrCq1XZwhLvUys8XT63AZM=
 github.com/hugomods/icons/vendors/bootstrap v0.5.0/go.mod h1:kfC17VWV+tNi6PGF4AY7CJBBa1/HEgWxCYq2kNOdcdI=
+github.com/hugomods/icons/vendors/bootstrap v0.5.2/go.mod h1:O+9YwW2aJiOIC7R/zmSnoiZjiix1HMJD5J7NRLxRg+M=
 github.com/hugomods/workbox v0.1.0 h1:yxuTj3gT1BNf6OitxrjxSJXfmbFBj2UTwdWr142eYFQ=
 github.com/hugomods/workbox v0.1.0/go.mod h1:RpFcIcltqYsiHWJV6PHPOdMagFZxO7nrO5XUpn/TMoc=
 github.com/jakearchibald/idb v7.1.1+incompatible h1:/o1ng3qUjgMUeeKFim3J3tiQAitcVXU12pXIjSzwT/c=
