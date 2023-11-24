@@ -1,0 +1,3 @@
+{{- if and .Page .URL }}
+  {{- .Page.Store.Add "pwa-bypass" (slice .URL) }}
+{{- end }}
