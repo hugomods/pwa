@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/hugomods/pwa/compare/v0.6.0...v0.7.0) (2023-11-24)
+
+
+### Features
+
+* allow bypassing caches ([#55](https://github.com/hugomods/pwa/issues/55)) ([bf8a4b9](https://github.com/hugomods/pwa/commit/bf8a4b9aae014e8bb8f778f20fdab522279cc4e9))
+
 ## [0.6.0](https://github.com/hugomods/pwa/compare/v0.5.1...v0.6.0) (2023-11-11)
 
 
