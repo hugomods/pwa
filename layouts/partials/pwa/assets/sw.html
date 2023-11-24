@@ -2,6 +2,7 @@
 {{- $baseURL := partialCached "pwa/functions/baseurl" . }}
 {{/* JS compile options. */}}
 {{- $precaches := slice }}
+{{- $bypass := slice }}
 {{- $langs := slice }}
 {{- $host := .Site.BaseURL }}
 {{/* Get precaches pages. */}}
@@ -24,6 +25,9 @@
 {{/* Get precaches assets. */}}
 {{- with .Store.Get "pwa-precache" }}
   {{- $precaches = $precaches | append (uniq .) }}
+{{- end }}
+{{- with .Store.Get "pwa-bypass" }}
+  {{- $bypass = $bypass | append (uniq .) }}
 {{- end }}
 {{- $pwaParams := .Site.Params.pwa }}
 {{/* Get precaches from configuration. */}}
@@ -48,6 +52,7 @@
   "baseURL" $baseURL
   "langs" $langs
   "precaches" $precaches
+  "bypass" $bypass
   "debug" $pwaParams.debug
   "caches" $pwaParams.caches
   "offline_image" $offlineImg
