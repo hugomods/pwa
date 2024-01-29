@@ -3,6 +3,11 @@ import { CacheableResponsePlugin } from 'workbox-cacheable-response'
 import { ExpirationPlugin } from 'workbox-expiration'
 import { registerRoute, setCatchHandler } from 'workbox-routing'
 import { CacheFirst, NetworkFirst, NetworkOnly, StaleWhileRevalidate } from 'workbox-strategies'
+import * as googleAnalytics from 'workbox-google-analytics'
+
+googleAnalytics.initialize({
+    cacheName: 'hugo-pwa-google-analytics',
+})
 
 self.__WB_DISABLE_DEV_LOGS = !params.debug
 
