@@ -5,4 +5,4 @@
 [![License](https://img.shields.io/github/license/hugomods/pwa?style=flat-square)](https://github.com/hugomods/pwa/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/tag/hugomods/pwa?label=version&style=flat-square)](https://github.com/hugomods/pwa/tags)
 
-A programmatic PWA (service worker) module for Hugo. See the [documentations](https://hugomods.com/en/docs/pwa/) to intergrate it with your theme.
+A programmatic PWA (service worker) module for Hugo. See the [documentation](https://hugomods.com/en/docs/pwa/) to intergrate it with your theme.
