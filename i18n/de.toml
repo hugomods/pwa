@@ -1,0 +1,18 @@
+[go_back]
+other = "Zurück"
+
+[home]
+other = "Startseite"
+
+[offline_title]
+other = "Oops! Du bist offline"
+
+[offline_info]
+other = """
+Es scheint ein Problem mit deiner Verbindung zu geben. Bitte überprüfe den Netzwerkstatus.
+
+Bitte kontaktiere uns, wenn du glaubst, dass es sich um einen Serverfehler handelt. Vielen Dank.
+"""
+
+[try_again]
+other = "versuche es erneut"
