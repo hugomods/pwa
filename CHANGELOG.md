@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/hugomods/pwa/compare/v0.7.0...v0.8.0) (2024-04-23)
+
+
+### Features
+
+* **i18n:** add German translations ([#64](https://github.com/hugomods/pwa/issues/64)) ([58ed322](https://github.com/hugomods/pwa/commit/58ed3223d7c25e89fdc476a63e1804071c8dda7d))
+
 ## [0.7.0](https://github.com/hugomods/pwa/compare/v0.6.0...v0.7.0) (2023-11-24)
 
 
