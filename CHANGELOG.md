@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/hugomods/pwa/compare/v0.8.0...v0.9.0) (2024-05-28)
+
+
+### Features
+
+* **i18n:** add Vietnamese translations ([17368e0](https://github.com/hugomods/pwa/commit/17368e02c846f64413a276e777bcc3604ea4ff5d))
+
 ## [0.8.0](https://github.com/hugomods/pwa/compare/v0.7.0...v0.8.0) (2024-04-23)
 
 
