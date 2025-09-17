@@ -67,10 +67,18 @@
 {{- $js := resources.Get "mods/pwa/service-worker/index.ts" }}
 {{/* Compile JS. */}}
 {{- $js = $js | js.Build $options }}
-<script>
-  if ('serviceWorker' in navigator) {
-  window.addEventListener('DOMContentLoaded', function() {
-    navigator.serviceWorker.register('{{ $js.RelPermalink }}');
-  });
-}
-</script>
+<div id="service-worker-index" data-src="{{ $js.RelPermalink }}"></div>
+
+{{- $options = dict
+  "sourceMap" (cond hugo.IsProduction "" "inline")
+  "minify" hugo.IsProduction
+  "target" "es2018"
+  "targetPath" "reg.js"
+}}
+{{- $regJs := resources.Get "mods/pwa/service-worker/register.ts" }}
+{{/* Compile JS. */}}
+{{- $regJs = $regJs | js.Build $options }}
+{{ if hugo.IsProduction }}
+  {{ $regJs = $regJs | fingerprint "sha512" }}
+{{ end }}
+<script src="{{ $regJs.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $regJs.Data.Integrity }}"{{ end }}></script>
